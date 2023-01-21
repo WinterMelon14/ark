@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="script.js"></script>
+</head>
+<!-- Working on: Button Bar -->
+<body>
+<div id="navbar">
+  <button id="drops">Mob Drops</button>
+  <button>Spawn Rates</button>
+  <button>Recipes</button>
+  <button>Timers</button> 
+  <button>Difficulty</button>
+  <button>Engrams</button>
+  <img id="help-panel-img" data-on="false" src="question.png">
+  
+</div>
+<div id="help-panel">
+  <h1>Basic Information</h1>
+  Clicking on any button in the top bar will change the editor interface.<br>
+  The left panel contains an interface to customize and add game changes.<br>
+  The middle panel contains a summary of your changes, and you can click on the text to remove your change.<br>
+  The right panel contains the code that you need to add to either Game.ini, GameUserSettings.ini, or both.<br>
+  As of right now, the only implemented tool is the spawn rate modifier. It cannot create configs for bosses/non-natural-spawning mobs. It does support mob addition and replacement.<br>
+  <button id="help-panel-exit">Got it!</button>
+</div>
+
+  
+<div id="spawn-interface">
+  <div id="mob-input-menu">
+    <input id="dino-input" type="text" list="dinos" name="Mob to add">
+      <datalist id="dinos">
+        <option value="Achatina">
+        <option value="Acrocanthosaurus">
+        <option value="Allosaurus">
+        <option value="Ammonite">
+        <option value="Andrewsarchus">
+        <option value="Anglerfish">
+        <option value="Ankylosaurus">
+        <option value="Araneo">
+        <option value="Archaeopteryx">
+        <option value="Argentavis">
+        <option value="Arthropluera">
+        <option value="Astrocetus">
+        <option value="Astrodelphis">
+        <option value="Attack Drone">
+        <option value="Aurochs">
+        <option value="Baryonyx">
+        <option value="Basilisk">
+        <option value="Basilosaurus">
+        <option value="Bloodstalker">
+        <option value="Brontosaurus">
+        <option value="Bulbdog">
+        <option value="Carbonemys">
+        <option value="Carcharodontosaurus">
+        <option value="Carnotaurus">
+        <option value="Castoroides">
+        <option value="Chalicotherium">
+        <option value="Cnidaria">
+        <option value="Coelacanth">
+        <option value="Compy">
+        <option value="Crystal Wyvern">
+        <option value="Daeodon">
+        <option value="Deathworm">
+        <option value="Defense Unit">
+        <option value="Deinonychus">
+        <option value="Desmodus">
+        <option value="Dilophosaur">
+        <option value="Dimetrodon">
+        <option value="Dimorphodon">
+        <option value="Diplocaulus">
+        <option value="Diplodocus">
+        <option value="Dire Bear">
+        <option value="Direwolf">
+        <option value="Dodo">
+        <option value="Doedicurus">
+        <option value="Dung Beetle">
+        <option value="Dunkleosteus">
+        <option value="Eel Minion">
+        <option value="Electrophorus">
+        <option value="Enforcer">
+        <option value="Equus">
+        <option value="Eurypterid">
+        <option value="Featherlight">
+        <option value="Ferox">
+        <option value="Fjordhawk">
+        <option value="Gacha">
+        <option value="Gallimimus">
+        <option value="Gasbags">
+        <option value="Giant Bee">
+        <option value="Giant Queen Bee">
+        <option value="Giganotosaurus">
+        <option value="Gigantopithecus">
+        <option value="Glowbug">
+        <option value="Glowtail">
+        <option value="Griffin">
+        <option value="Hesperornis">
+        <option value="Hyaenodon">
+        <option value="Ice Golem">
+        <option value="Ice Wyvern">
+        <option value="Ichthyornis">
+        <option value="Ichthyosaurus">
+        <option value="Iguanodon">
+        <option value="Insect Swarm">
+        <option value="Jerboa">
+        <option value="Jugbug">
+        <option value="Kairuku">
+        <option value="Kaprosuchus">
+        <option value="Karkinos">
+        <option value="Kentrosaurus">
+        <option value="Lamprey">
+        <option value="Leech">
+        <option value="Leedsichthys">
+        <option value="Liopleurodon">
+        <option value="Lymantria">
+        <option value="Lystrosaurus">
+        <option value="Macrophage">
+        <option value="Maewing">
+        <option value="Magmasaur">
+        <option value="Mammoth">
+        <option value="Managarmr">
+        <option value="Manta">
+        <option value="Manticore">
+        <option value="Mantis">
+        <option value="Megacerops">
+        <option value="Megachelon">
+        <option value="Megalania">
+        <option value="Megaloceros">
+        <option value="Megalodon">
+        <option value="Megalosaurus">
+        <option value="Meganeura">
+        <option value="Megatherium">
+        <option value="Mesopithecus">
+        <option value="Microraptor">
+        <option value="Morellatops">
+        <option value="Mosasaurus">
+        <option value="Moschops">
+        <option value="Nameless">
+        <option value="Noglin">
+        <option value="Onyc">
+        <option value="Otter">
+        <option value="Oviraptor">
+        <option value="Ovis">
+        <option value="Pachy">
+        <option value="Pachyrhinosaurus">
+        <option value="Paraceratherium">
+        <option value="Parasaur">
+        <option value="Pegomastax">
+        <option value="Pelagornis">
+        <option value="Phiomia">
+        <option value="Phoenix">
+        <option value="Piranha">
+        <option value="Plesiosaur">
+        <option value="Procoptodon">
+        <option value="Pteranodon">
+        <option value="Pulmonoscorpius">
+        <option value="Purlovia">
+        <option value="Quetzal">
+        <option value="Raptor">
+        <option value="Ravager">
+        <option value="Reaper">
+        <option value="Rex">
+        <option value="Rock Drake">
+        <option value="Rock Elemental">
+        <option value="Roll Rat">
+        <option value="Sabertooth">
+        <option value="Sabertooth Salmon">
+        <option value="Sarcosuchus">
+        <option value="Scout">
+        <option value="Seeker">
+        <option value="Shadowmane">
+        <option value="Shinehorn">
+        <option value="Snow owl">
+        <option value="Spinosaurus">
+        <option value="Stegosaurus">
+        <option value="Styracosaurus">
+        <option value="Summoner">
+        <option value="Tapejara">
+        <option value="Tek Stryder">
+        <option value="Terror Bird">
+        <option value="Therizinosaur">
+        <option value="Thorny Dragon">
+        <option value="Thylacoleo">
+        <option value="Titanoboa">
+        <option value="Titanomyrma">
+        <option value="Titanosaur">
+        <option value="Triceratops">
+        <option value="Trilobite">
+        <option value="Troodon">
+        <option value="Tropeognathus">
+        <option value="Tuso">
+        <option value="Velonasaur">
+        <option value="Vulture">
+        <option value="Woolly Rhino">
+        <option value="Yutyrannus">
+        <option value="Wyvern"></datalist>
+    <div id="dino-input-text">Select a dino to add</div>
+    <div id="dino-replacement">
+      <input id="dino-replacement-checkbox" type="checkbox" name="replace" style="flex-grow: 1"> 
+      <div id="dino-replacement-checkbox-text" style="flex-grow: 3">Replace?</div>
+      <input disabled="true" id="dino-replacement-input" type="text" name="Mob to add" list="dinos">
+    </div>
+    <div id="dino-spawn-map">
+      <div id="dino-spawn-map-text" style="flex-grow: 1">Map</div>
+      <select id="dino-spawn-map-input" style="flex-grow:2">
+          <option disabled selected value> -- Select an Option -- </option>
+          <option value="Island">Island</option>
+      </select> 
+        
+    </div>
+    <div id="dino-spawn-area">
+      <div id="dino-spawn-area-text" style="flex-grow: 1">Spawn Area</div>
+      <select id="dino-spawn-area-input" style="flex-grow:2" type="text">
+        
+        <option id="dino-spawn-area-input-placeholder" value="Select a map!">Select a map!</option>
+      </select>
+    </div>
+    <div id="dino-spawn-rate">
+      <div id="dino-spawn-rate-text" style="flex-grow: 1">% chance to spawn</div>
+      <input id="dino-spawn-rate-input" style="flex-grow:2" type="number">
+    </div>
+    <div id="dino-spawn-max">
+      <div id="dino-spawn-max-text" style="flex-grow: 1">Max Population %</div>
+      <input id="dino-spawn-max-input" style="flex-grow:2" type="number">
+    </div>
+    <button id="dino-input-submit">Add</button>
+  </div>
+
+  
+  <div id="mob-output-menu"></div>
+  
+  <div id="command-output">
+    <span class="center-text">Add in Game.ini<br></span>
+  </div>
+</div>
+</body>
+</html>

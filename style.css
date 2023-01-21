@@ -1,0 +1,390 @@
+:root {
+  --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-color: #635f5f;
+}
+#help-panel-exit{
+  position:absolute;
+  cursor:pointer;
+  color:var(--font-color);
+  font-family: var(--font);
+  font-size:2vw;
+  width:15%;
+  height:10%;
+  bottom:5%;
+  border-radius:5px;
+  border:none;
+  background-color:#f8eded;
+  left:42.5%;
+}
+#help-panel{
+  z-index: 15;
+  position:absolute;
+  width:80%;
+  height:80%;
+  top:10%;
+  left:10%;
+  background-color: #e0e6e0;
+  text-align:center;
+  font-family:var(--font);
+  color:var(--font-color);
+  border-radius:15px;
+}
+img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity: 0.4;
+}
+
+img:hover {
+  opacity: 1.0;
+  cursor:pointer;
+}
+
+.center-text{
+  text-align: center;
+  font:var(--font);
+  color:var(--font-color);
+  font-size:1.5vw;
+}
+
+#navbar {
+  overflow: hidden;
+  position:absolute;
+  background-color: #a29696;
+  font-family: Arial, Helvetica, sans-serif;
+  width:100%;
+  left:0;
+  top:0;
+  height:9%;
+  display:flex;
+}
+body, html{
+  width:100vw;
+}
+#help-panel-img{
+  right:0;
+  padding:0px;
+  margin:0px;
+  width: 8%;
+  font-size: 1.75vw;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-width: 0;
+  height:100%;
+}
+#navbar button {
+  background-color: #a29696;
+  width:14.1%;
+  font-size: 1.75vw;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-width: 0;
+  height:100%;
+}
+
+
+#navbar button:hover{
+  background-color: #605c5c;
+  cursor:pointer;
+}
+
+#spawn-interface{
+  overflow:hidden;
+  position:absolute;
+  left:0;
+  background-color:#c2c2c2;
+  width:100%;
+  top:9%;
+  height:91%;
+}
+#mob-input-menu{
+  height:90%;
+  width:25%;
+  position:absolute;
+  left:8%;
+  top:5%;
+  background-color: #d7cbcb;
+  border-radius:15px;
+}
+#mob-output-menu{
+  height:92.5%;
+  width:25%;
+  position:absolute;
+  left:40%;
+  top:2.5%;
+  text-align: center;
+  background-color: #d7cbcb;
+  border-radius:15px;
+}
+#command-output{
+
+  height:92.5%;
+  width:25%;
+  position:absolute;
+  right:5%;
+  top:2.5%;
+  background-color: #d7cbcb;
+  border-radius:15px;
+}
+
+#dino-input{
+  position:absolute;
+  width: 99%;
+  left:0;
+  height:13%;
+  top:10%;
+  border: none;
+  border-radius: 4px;
+  background-color: #eae1e1;
+}
+
+#dino-input-text{
+  color:var(--font-color);
+  height:10%;
+  font-family:var(--font);
+  font-size: 1.25vw;
+  text-align:center;
+  vertical-align: middle;
+  line-height: 50px;   
+}
+
+#dino-replacement{
+  position:absolute;
+  top:25%;
+  width:100%;
+  height:16%;
+  display:flex;
+  flex-direction:row;
+  vertical-align: center;
+  line-height: 100px;
+  align-items: center; /* Align vertical */
+  
+}
+#dino-replacement > *{
+  display:flexbox;
+  text-align:left;
+  font-family:var(--font);
+  color:var(--font-color);
+  position:absolute;
+}
+#dino-replacement-checkbox-text{
+  left:15%;
+  font-size:1.5vw;
+}
+#dino-replacement-input{
+  height:100%;
+  position:absolute;
+  border-radius:4px;
+  width:50%;
+  right:0;
+  background-color: #eadcdc;
+  border: 0;
+}
+#dino-replacement-checkbox{
+  height:35%;
+  width:15%;
+  left:0;
+}
+#dino-spawn-rate{
+  position:absolute;
+  width:100%;
+  top:65%;
+  background-color: #ece4e4;
+  height:9.8%;
+  display:flex;
+  border-radius:5px;
+  flex-direction:row;
+  vertical-align: center;
+  line-height: 100px;
+  align-items: center;
+}
+#dino-spawn-rate > * {
+  
+  display:flexbox;
+  position:absolute;
+}
+#dino-spawn-rate-text{
+  text-align:center;
+  font-family:var(--font);
+  color:var(--font-color);
+  min-height:10px;
+  width:50%;
+  font-size:1.25vw;
+  left:0;
+
+}
+#dino-spawn-rate-input{
+  border-radius:4px;
+  height:100%;
+  width:50%;
+  background-color: #eadcdc;
+  border: 0;
+  right:0;
+}
+
+
+#dino-spawn-max{
+  position:absolute;
+  width:100%;
+  top:76%;
+  background-color: #ece4e4;
+  height:9.8%;
+  display:flex;
+  border-radius:5px;
+  flex-direction:row;
+  vertical-align: center;
+  line-height: 100px;
+  align-items: center;
+}
+#dino-spawn-max > * {
+  position:absolute;
+  display:flexbox;
+}
+#dino-spawn-max-text{
+  width:50%;
+  left:0;
+  text-align:center;
+  font-family:var(--font);
+  color:var(--font-color);
+  font-size:1vw;
+
+}
+#dino-spawn-max-input{
+  border-radius:4px;
+  right:0;
+  width:50%;
+  height:100%;
+  background-color: #eadcdc;
+  border: 0;
+
+}
+#dino-input-submit{
+  position:absolute;
+  bottom:2%;
+  height:10%;
+  font-size: 1.5vw;
+  width:40%;
+  left:30%;
+  text-align: center;
+  font-family:var(--font);
+  color:var(--font-color);
+  background-color:#fdeded;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+#dino-input-submit:hover{
+  opacity:70%;
+}
+#dino-spawn-map{
+  position:absolute;
+  width:100%;
+  top:43%;
+  background-color: #ece4e4;
+  height:9.8%;
+  display:flex;
+  border-radius:5px;
+  flex-direction:row;
+  vertical-align: center;
+  line-height: 100px;
+  align-items: center;
+}
+#dino-spawn-map > * {
+  position:absolute;
+  display:flexbox;
+}
+#dino-spawn-map-text{
+  width:50%;
+  left:0;
+  text-align:center;
+  font-family:var(--font);
+  color:var(--font-color);
+  font-size:1vw;
+
+}
+option{
+  left:0;
+  text-align:center;
+  font-family:var(--font);
+  color:var(--font-color);
+  font-size:1vw;
+}
+#dino-spawn-map-input{
+  border-radius:4px;
+  right:0;
+  width:50%;
+  height:100%;
+  background-color: #eadcdc;
+  border: 0;
+
+}
+
+#dino-spawn-area{
+  position:absolute;
+  width:100%;
+  top:54%;
+  background-color: #ece4e4;
+  height:9.8%;
+  display:flex;
+  border-radius:5px;
+  flex-direction:row;
+  vertical-align: center;
+  line-height: 100px;
+  align-items: center;
+}
+#dino-spawn-area > * {
+  position:absolute;
+  display:flexbox;
+}
+#dino-spawn-area-text{
+  width:50%;
+  left:0;
+  text-align:center;
+  font-family:var(--font);
+  color:var(--font-color);
+  font-size:1vw;
+
+}
+#dino-spawn-area-input{
+  border-radius:4px;
+  right:0;
+  width:50%;
+  height:100%;
+  background-color: #eadcdc;
+  border: 0;
+
+}
+.mob-ini-output{
+  color:black;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#command-output{
+    padding: 8px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#mob-output-menu{
+    padding: 8px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+#command-output > span{
+  word-wrap: break-word;
+  font-size: 1.3vw;
+  font-family: var(--font);
+}
+.mob-output{
+  font-size: 1.3vw;
+  font-family: var(--font);
+  color: var(--font-color);
+  display:inline-block;
+}
+
